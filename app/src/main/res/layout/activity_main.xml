@@ -26,7 +26,7 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:textColor="#2196F3"
-        android:textColorHint="#63063051"
+        android:textColorHint="@color/textColorHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_urnmame"
         app:layout_constraintTop_toTopOf="parent"
