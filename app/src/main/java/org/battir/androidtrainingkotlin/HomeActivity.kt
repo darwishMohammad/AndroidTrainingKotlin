@@ -62,6 +62,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
         findViewById<Button>(R.id.btn_passdata).setOnClickListener(this)
         findViewById<Button>(R.id.btn_getresult).setOnClickListener(this)
         findViewById<Button>(R.id.btn_savedInstanceActivity).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_views_activity).setOnClickListener(this)
         //endregion
 
     }
@@ -134,6 +135,9 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
             }
             R.id.btn_savedInstanceActivity -> {
                 startActivity(Intent(this@HomeActivity, ActivitySavedInstance::class.java))
+            }
+            R.id.btn_views_activity -> {
+                startActivity(Intent(this@HomeActivity, ViewsActivity::class.java))
             }
 
         }

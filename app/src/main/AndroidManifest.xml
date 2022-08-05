@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AndroidTrainingKotlin"
         tools:targetApi="31">
         <activity
+            android:name=".ViewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivitySavedInstance"
             android:exported="false" />
         <activity
@@ -54,6 +57,10 @@
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
