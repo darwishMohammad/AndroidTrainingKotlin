@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
-                android:textColor="#F00"
+                android:textColor="#DD9E9E"
                 android:text="@string/opengoogle"></Button>
             <Button
                 android:id="@+id/btn_dialphone"
@@ -51,6 +51,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/getresult"></Button>
+            <Button
+                android:id="@+id/btn_savedInstanceActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saved Instance Activity"></Button>
 
         </LinearLayout>
     </ScrollView>
