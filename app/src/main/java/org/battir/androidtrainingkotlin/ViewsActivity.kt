@@ -1,10 +1,14 @@
 package org.battir.androidtrainingkotlin
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import org.battir.androidtrainingkotlin.Adapters.SpinnerCustomAdapter
+
 
 class ViewsActivity : AppCompatActivity() {
     var radioGroup: RadioGroup? = null
@@ -40,6 +44,26 @@ class ViewsActivity : AppCompatActivity() {
         val spin = findViewById<View>(R.id.spinner_custom) as Spinner
         val customAdapter = SpinnerCustomAdapter(this, flags, countryNames)
         spin.adapter = customAdapter
+
+        //When activity starts, this view gain the focus
+        val editText1 = findViewById<EditText>(R.id.editText)
+        editText1.requestFocus()
+        editText1.setOnFocusChangeListener(View.OnFocusChangeListener { view, b ->
+            if (b != true)
+                Toast.makeText(this, "Focus Loast", Toast.LENGTH_LONG).show()
+            else
+                Toast.makeText(this, "Focus gained", Toast.LENGTH_LONG).show()
+        })
+        findViewById<ExtendedFloatingActionButton>(R.id.fab_extended).setOnClickListener { view ->
+            val snackbar = Snackbar
+                .make(view, "Are you sure you want to clos this window?", Snackbar.LENGTH_LONG)
+                .setAction("Okay") {
+                    finish()
+                }
+            snackbar.setActionTextColor(Color.RED)
+            snackbar.setTextColor(Color.YELLOW)
+            snackbar.show()
+        }
     }
 
     fun showToastOfText(view: View) {
