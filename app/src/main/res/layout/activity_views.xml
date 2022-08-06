@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:fontFamily="@font/aclonica"
         android:hint="Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -102,11 +103,13 @@
         app:layout_constraintTop_toBottomOf="@+id/toggleButton">
 
         <RadioButton
+            android:id="@+id/rb_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Male" />
 
         <RadioButton
+            android:id="@+id/rb_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Female" />
@@ -197,9 +200,9 @@
         app:icon="@drawable/arrow_left"
         android:textAllCaps="false"
         android:textAlignment="center"
-        app:iconTint="#3B8064"
-        android:textColor="#3B8064"
-        app:iconGravity="textStart"
+        app:iconTint="#8EEACA"
+        android:textColor="#05804F"
+        app:iconGravity="start"
         tools:text="Back"
 
         app:rippleColor="#D3AEAE"

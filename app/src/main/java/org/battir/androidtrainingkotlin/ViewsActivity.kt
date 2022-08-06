@@ -1,5 +1,6 @@
 package org.battir.androidtrainingkotlin
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -11,7 +12,7 @@ import org.battir.androidtrainingkotlin.Adapters.SpinnerCustomAdapter
 
 
 class ViewsActivity : AppCompatActivity() {
-    var radioGroup: RadioGroup? = null
+    lateinit var radioGroup: RadioGroup
     var spinner: Spinner? = null
     var countryNames = arrayOf("India", "China", "Australia", "Portugle", "America", "New Zealand")
     var flags = intArrayOf(R.drawable.bar_chart,
@@ -24,14 +25,23 @@ class ViewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_views)
+
+        /**
+         * Radio Buttons and Radiobutton Group
+         */
         radioGroup = findViewById<View>(R.id.rg_gender) as RadioGroup
         radioGroup!!.setOnCheckedChangeListener { radioGroup, checkedId ->
             when (checkedId) {
-                1 -> Toast.makeText(applicationContext, "Index 1", Toast.LENGTH_LONG).show()
-                2 -> Toast.makeText(applicationContext, "Index 2", Toast.LENGTH_LONG).show()
+                R.id.rb_1 ->{
+                    Toast.makeText(applicationContext, "Index 1", Toast.LENGTH_LONG).show()
+                }
+                R.id.rb_2 -> Toast.makeText(applicationContext, "Index 2", Toast.LENGTH_LONG).show()
             }
         }
-        spinner = findViewById<View>(R.id.spinner) as Spinner
+        /**
+         * Spinner With Array of String
+         */
+        spinner = findViewById<Spinner>(R.id.spinner)
         spinner!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View, i: Int, l: Long) {
                 Toast.makeText(applicationContext,
@@ -41,19 +51,34 @@ class ViewsActivity : AppCompatActivity() {
 
             override fun onNothingSelected(adapterView: AdapterView<*>?) {}
         }
+        /**
+         * Spinner with custom adapter
+         */
         val spin = findViewById<View>(R.id.spinner_custom) as Spinner
         val customAdapter = SpinnerCustomAdapter(this, flags, countryNames)
         spin.adapter = customAdapter
 
         //When activity starts, this view gain the focus
+        /**
+         * EditText focus listener
+         */
         val editText1 = findViewById<EditText>(R.id.editText)
         editText1.requestFocus()
         editText1.setOnFocusChangeListener(View.OnFocusChangeListener { view, b ->
-            if (b != true)
+            if (b == true) {
+                var edt:EditText =view as EditText
+                edt.setTextColor(Color.RED)
                 Toast.makeText(this, "Focus Loast", Toast.LENGTH_LONG).show()
-            else
+            } else {
                 Toast.makeText(this, "Focus gained", Toast.LENGTH_LONG).show()
+                var edt:EditText =view as EditText
+                edt.setTextColor(Color.BLACK)
+            }
         })
+
+        /**
+         * Floating Action Button
+         */
         findViewById<ExtendedFloatingActionButton>(R.id.fab_extended).setOnClickListener { view ->
             val snackbar = Snackbar
                 .make(view, "Are you sure you want to clos this window?", Snackbar.LENGTH_LONG)
