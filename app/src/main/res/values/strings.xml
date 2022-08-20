@@ -54,6 +54,8 @@
         \n <b><i><u>To clear the error, click the View declaration</u></i></b> \n, place your cursor on it,\t and then press Alt+Enter,
         or Option+Enter on a Mac, to perform a Quick Fix. If a menu appears, select Import class.
     </string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
     <array name="cities_list">
         <item>Ramallah</item>
         <item>Hebron</item>

@@ -6,7 +6,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class ButtonAndToastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 //        })
 
         btn_hel.setOnClickListener{
-            Toast.makeText(this@MainActivity, "Hello ${edt_name.text}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@ButtonAndToastActivity, "Hello ${edt_name.text}", Toast.LENGTH_SHORT).show()
         }
 
 //        btn_hel.setOnClickListener(View.OnClickListener { view ->

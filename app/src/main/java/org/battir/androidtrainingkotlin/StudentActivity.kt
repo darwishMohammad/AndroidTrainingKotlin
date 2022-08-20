@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.RequiresApi
-import org.unrwa.classes.Student
+import org.kotlincode.Student
 import java.time.LocalDate
 
 class StudentActivity : AppCompatActivity() {

@@ -63,6 +63,8 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
         findViewById<Button>(R.id.btn_getresult).setOnClickListener(this)
         findViewById<Button>(R.id.btn_savedInstanceActivity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_views_activity).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_fragmentActivity).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_dialogsActivity).setOnClickListener(this)
         //endregion
 
     }
@@ -124,7 +126,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
             }
             R.id.btn_passdata -> {
                 var message: String = "Hello Activity Two!"
-                val intent:Intent = Intent(this, MainActivity2::class.java)
+                val intent:Intent = Intent(this, ReceiveIntentActivity::class.java)
                 intent.putExtra(EXTRA_MESSAGE, message)
                 startActivity(intent)
             }
@@ -138,6 +140,9 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
             }
             R.id.btn_views_activity -> {
                 startActivity(Intent(this@HomeActivity, ViewsActivity::class.java))
+            }
+            R.id.btn_dialogsActivity -> {
+                startActivity(Intent(this@HomeActivity, DialogsActivity::class.java))
             }
 
         }

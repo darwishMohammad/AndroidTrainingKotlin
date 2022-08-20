@@ -14,7 +14,7 @@ import org.battir.androidtrainingkotlin.Adapters.SpinnerCustomAdapter
 class ViewsActivity : AppCompatActivity() {
     lateinit var radioGroup: RadioGroup
     var spinner: Spinner? = null
-    var countryNames = arrayOf("India", "China", "Australia", "Portugle", "America", "New Zealand")
+    var countryNames = arrayOf<String>("India", "China", "Australia", "Portugle", "America", "New Zealand")
     var flags = intArrayOf(R.drawable.bar_chart,
         R.drawable.emp_pic3,
         R.drawable.ic_job_running,
@@ -42,7 +42,7 @@ class ViewsActivity : AppCompatActivity() {
          * Spinner With Array of String
          */
         spinner = findViewById<Spinner>(R.id.spinner)
-        spinner!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View, i: Int, l: Long) {
                 Toast.makeText(applicationContext,
                     "You select " + (view as TextView).text.toString(),

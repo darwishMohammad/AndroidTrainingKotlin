@@ -16,6 +16,15 @@
         android:theme="@style/Theme.AndroidTrainingKotlin"
         tools:targetApi="31">
         <activity
+            android:name=".FragmentHostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DialogsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentForm"
+            android:exported="false" />
+        <activity
             android:name=".ViewsActivity"
             android:exported="false" />
         <activity
@@ -39,7 +48,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity2"
+            android:name=".ReceiveIntentActivity"
             android:exported="true"
             android:icon="@drawable/activity2"
             android:parentActivityName=".HomeActivity">
@@ -54,7 +63,7 @@
             android:name=".ActivityLifeCycle"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ButtonAndToastActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
