@@ -65,6 +65,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
         findViewById<Button>(R.id.btn_views_activity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_fragmentActivity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_dialogsActivity).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_MenusActivity).setOnClickListener(this)
         //endregion
 
     }
@@ -141,8 +142,14 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
             R.id.btn_views_activity -> {
                 startActivity(Intent(this@HomeActivity, ViewsActivity::class.java))
             }
+            R.id.btn_fragmentActivity -> {
+                startActivity(Intent(this@HomeActivity, FragmentHostActivity::class.java))
+            }
             R.id.btn_dialogsActivity -> {
                 startActivity(Intent(this@HomeActivity, DialogsActivity::class.java))
+            }
+            R.id.btn_MenusActivity -> {
+                startActivity(Intent(this@HomeActivity, MenusActivity::class.java))
             }
 
         }

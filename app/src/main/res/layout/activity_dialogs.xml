@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_date_dialog"
             android:text="Show Date Dialog"
-            app:iconGravity="textStart"
+            app:iconGravity="textTop"
             app:icon="@android:drawable/sym_call_outgoing"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:textAllCaps="false"/>
@@ -51,6 +51,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="name not entered yet"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time not entered yet"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date not entered yet"
             android:gravity="center"
             android:layout_marginTop="10dp"/>
     </LinearLayout>

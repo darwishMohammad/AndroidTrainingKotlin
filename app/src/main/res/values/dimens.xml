@@ -7,4 +7,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="btn_font_size">20sp</dimen>
     <dimen name="dialog_txt_size">16sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 </resources>

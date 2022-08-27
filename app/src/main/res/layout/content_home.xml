@@ -71,6 +71,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dialogs Activity"></Button>
+            <Button
+                android:id="@+id/btn_MenusActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menus Activity"></Button>
 
         </LinearLayout>
     </ScrollView>

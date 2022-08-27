@@ -54,6 +54,7 @@
         \n <b><i><u>To clear the error, click the View declaration</u></i></b> \n, place your cursor on it,\t and then press Alt+Enter,
         or Option+Enter on a Mac, to perform a Quick Fix. If a menu appears, select Import class.
     </string>
+    <string name="share_text_with">Share text with ...</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <array name="cities_list">
@@ -62,4 +63,54 @@
         <item>Tolkarim</item>
         <item>Nablus</item>
     </array>
+
+    <string name="long_text">"
+
+        Build your first app
+The following pages teach you how to build a simple Android app. You’ll learn how to create a "Hello World" project with Android Studio and run it. Then, you'll create a new interface for the app that takes some user input and opens a second screen in the app.
+
+But before you start, there are two fundamental concepts you should understand about Android apps:
+
+Apps provide multiple entry points
+Android apps are built as a combination of components that can be invoked individually. For example, an activity is a type of app component that provides a user interface.
+
+The "main" activity is what starts when the user taps your app icon, but you can take the user straight into a different activity from other places, such as from a notification or even from a different app.
+
+Other components such as broadcast receivers and services also allow your app to perform background tasks without a user interface.
+
+After you build your first app, learn more about the other components at App Fundamentals.
+
+Apps adapt to different devices
+Android allows you to provide different resources for different devices. For example, you can create different layouts for different screen sizes. Then the system determines which layout to use based on the current device's screen size.
+
+If any of your app's features need specific hardware, such as a camera, you can query whether the device has that hardware at runtime and then disable the corresponding features if not. You can also set some features as required so Google Play won't allow installation on devices without them.
+
+After you build your first app, learn more about device configurations at Device Compatibility.
+
+With those basic concepts in mind, click below to start building your first app!
+
+Next
+Create an Android project
+        0566546555
+
+        moh@moh.com
+        https://developer.android.com/training/basics/firstapp/
+"
+
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menus2">MenusActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="title_activity_tabs">TabsActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
