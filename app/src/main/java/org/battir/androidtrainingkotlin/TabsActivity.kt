@@ -8,29 +8,42 @@ import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toolbar
+import org.battir.androidtrainingkotlin.Adapters.ViewPagerAdapter
 import org.battir.androidtrainingkotlin.ui.main.SectionsPagerAdapter
 import org.battir.androidtrainingkotlin.databinding.ActivityTabsBinding
+import org.battir.androidtrainingkotlin.fragments.Tab1Fragment
 
 class TabsActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTabsBinding
+    private lateinit var pager: ViewPager // creating object of ViewPager
+private lateinit var tab: TabLayout  // creating object of TabLayout
+private lateinit var bar: Toolbar    // creating object of ToolBar
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_tabs)
 
-        binding = ActivityTabsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    // set the references of the declared objects above
+    pager = findViewById(R.id.viewPager)
+    tab = findViewById(R.id.tabs)
+    bar = findViewById(R.id.toolbar)
 
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
-        val viewPager: ViewPager = binding.viewPager
-        viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = binding.tabs
-        tabs.setupWithViewPager(viewPager)
-        val fab: FloatingActionButton = binding.fab
+    // To make our toolbar show the application
+    // we need to give it to the ActionBar
+//    setSupportActionBar(bar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-    }
+    // Initializing the ViewPagerAdapter
+    val adapter = ViewPagerAdapter(supportFragmentManager)
+
+    // add fragment to the list
+    adapter.addFragment(Tab1Fragment(), "Tab 1")
+    adapter.addFragment(Tab1Fragment(), "Tab 2")
+
+    // Adding the Adapter to the ViewPager
+    pager.adapter = adapter
+
+    // bind the viewPager with the TabLayout.
+    tab.setupWithViewPager(pager)
+}
 }

@@ -33,7 +33,7 @@ class MenusActivity :AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         override fun onActionItemClicked(mode: ActionMode, item: MenuItem): Boolean {
             return when (item.itemId) {
                 R.id.menu_share -> {
-                    val txt = (findViewById<View>(R.id.textView) as TextView).text.toString()
+                    val txt = findViewById<TextView>(R.id.textView).text.toString()
                     val mimeType = "text/plain"
                     ShareCompat.IntentBuilder(this@MenusActivity)
                         .setType(mimeType)
@@ -138,21 +138,22 @@ class MenusActivity :AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreateContextMenu(menu: ContextMenu, v: View, menuInfo: ContextMenu.ContextMenuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo)
-        menuInflater.inflate(R.menu.menu_context, menu)
+        menuInflater.inflate(R.menu.context_menu2, menu)
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menu_whatisthis -> {
-//                val alertDialog = AlertDialog.Builder(this)
-//                alertDialog.setTitle("What is this")
-//                alertDialog.setMessage("This is a context menu :)")
-//                alertDialog.setPositiveButton("OK") { dialog, which -> dialog.dismiss() }
-//                alertDialog.setCancelable(true)
-//                alertDialog.show()
-                true
-            }
-            else -> super.onContextItemSelected(item)
-        }
+        return true
+//        return when (item.itemId) {
+//            R.id.menu_whatisthis -> {
+////                val alertDialog = AlertDialog.Builder(this)
+////                alertDialog.setTitle("What is this")
+////                alertDialog.setMessage("This is a context menu :)")
+////                alertDialog.setPositiveButton("OK") { dialog, which -> dialog.dismiss() }
+////                alertDialog.setCancelable(true)
+////                alertDialog.show()
+//                true
+//            }
+//            else -> super.onContextItemSelected(item)
+//        }
     }
 }

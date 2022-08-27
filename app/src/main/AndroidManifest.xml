@@ -53,6 +53,7 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true"
+            android:roundIcon="@mipmap/demo_app_icon"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.AndroidTrainingKotlin.NoActionBar">
             <intent-filter>
