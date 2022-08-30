@@ -68,7 +68,7 @@
                 android:id="@+id/btn_TabsActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Menus Activity"></Button>
+                android:text="Tabs Activity"></Button>
 
         </LinearLayout>
     </ScrollView>
