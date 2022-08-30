@@ -4,6 +4,7 @@
     package="org.battir.androidtrainingkotlin">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -54,8 +55,7 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:roundIcon="@mipmap/demo_app_icon"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.AndroidTrainingKotlin.NoActionBar">
+            android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <Button
+                android:id="@+id/btn_activitylifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_lifecycle"></Button>
+            <Button
+                android:id="@+id/btn_scrollActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/longstringactivity"></Button>
+            <Button
+                android:id="@+id/btn_opengoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="#DD9E9E"
+                android:text="@string/opengoogle"></Button>
+            <Button
+                android:id="@+id/btn_dialphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialphone"></Button>
+            <Button
+                android:id="@+id/btn_passdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/passdata"></Button>
+            <Button
+                android:id="@+id/btn_getresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/getresult"></Button>
+            <Button
+                android:id="@+id/btn_savedInstanceActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saved Instance Activity"></Button>
+            <Button
+                android:id="@+id/btn_views_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multiviews Activity"></Button>
+            <Button
+                android:id="@+id/btn_fragmentActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fragments Activity"></Button>
+            <Button
+                android:id="@+id/btn_dialogsActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dialogs Activity"></Button>
+            <Button
+                android:id="@+id/btn_MenusActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menus Activity"></Button>
+            <Button
+                android:id="@+id/btn_TabsActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menus Activity"></Button>
 
-    <include
-        android:id="@+id/app_bar_home"
-        layout="@layout/app_bar_home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_home"
-        app:menu="@menu/activity_main_drawer" />
-</androidx.drawerlayout.widget.DrawerLayout>
+        </LinearLayout>
+    </ScrollView>

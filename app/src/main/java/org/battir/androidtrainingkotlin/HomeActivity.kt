@@ -11,49 +11,16 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import org.battir.androidtrainingkotlin.databinding.ActivityHomeBinding
+import androidx.navigation.ui.AppBarConfiguration
 
 const val EXTRA_MESSAGE:String =    "org.battir.androidtrainingkotlin.extra.MESSAGE"
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener{
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        setSupportActionBar(binding.appBarHome.toolbar)
-
-        binding.appBarHome.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-        val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-            ), drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-
-
+        setContentView(R.layout.activity_home)
         //region Adding OnClickListener
         findViewById<Button>(R.id.btn_activitylifecycle).setOnClickListener(this)
         findViewById<Button>(R.id.btn_scrollActivity).setOnClickListener(this)
@@ -66,24 +33,11 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
         findViewById<Button>(R.id.btn_fragmentActivity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_dialogsActivity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_MenusActivity).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_TabsActivity).setOnClickListener(this)
         //endregion
 
     }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.home, menu)
-        return true
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_home)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
-
-
-    // Receiver
+      // Receiver
     private val getResult =
         registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
@@ -150,6 +104,9 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener{
             }
             R.id.btn_MenusActivity -> {
                 startActivity(Intent(this@HomeActivity, MenusActivity::class.java))
+            }
+            R.id.btn_TabsActivity -> {
+                startActivity(Intent(this@HomeActivity, TabsActivity::class.java))
             }
 
         }
