@@ -1,8 +1,8 @@
 package org.battir.androidtrainingkotlin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class ReceiveIntentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,6 +12,6 @@ class ReceiveIntentActivity : AppCompatActivity() {
         val message = intent.getStringExtra(EXTRA_MESSAGE)
 
 
-        findViewById<TextView>(R.id.tv_extraholder).text=message
+        findViewById<TextView>(R.id.tv_extraholder).text = message
     }
 }

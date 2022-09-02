@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import androidx.core.widget.ListViewCompat
 import androidx.fragment.app.ListFragment
 import org.battir.androidtrainingkotlin.R
 
@@ -52,7 +51,8 @@ class CitiesFragment : ListFragment() {
         "Ya'bad",
         "al-Yamun",
         "Yatta"
-        )
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -66,8 +66,9 @@ class CitiesFragment : ListFragment() {
     }
 
     override fun onListItemClick(l: ListView, v: View, position: Int, id: Long) {
-        Log.i("ListFragmen",citiesList[position])
-        val f2: DisplayFragment? = parentFragmentManager!!.findFragmentById(R.id.fragment2) as DisplayFragment?
+        Log.i("ListFragmen", citiesList[position])
+        val f2: DisplayFragment? =
+            parentFragmentManager!!.findFragmentById(R.id.fragment2) as DisplayFragment?
         f2?.change(citiesList[position])
         listView.setSelector(android.R.color.holo_blue_dark)
     }

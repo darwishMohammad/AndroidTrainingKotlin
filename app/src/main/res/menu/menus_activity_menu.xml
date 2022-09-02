@@ -5,8 +5,7 @@
         android:id="@+id/menu_add"
         android:icon="@drawable/menu_add"
         android:title="Add Item"
-        app:showAsAction="always">
-    </item>
+        app:showAsAction="always"></item>
     <item
         android:icon="@drawable/menu_file"
         android:title="File"
@@ -28,8 +27,7 @@
             <item
                 android:id="@+id/menu_save"
                 android:icon="@drawable/menu_file"
-                android:title="Save"
-                ></item>
+                android:title="Save"></item>
         </menu>
     </item>
     <item
@@ -37,8 +35,7 @@
         android:icon="@drawable/menu_share"
         android:title="Share date with your friends to have fun"
         android:titleCondensed="Share"
-        app:showAsAction="ifRoom"
-        >
+        app:showAsAction="ifRoom">
         <menu>
             <item
                 android:id="@+id/menu_whatsapp"

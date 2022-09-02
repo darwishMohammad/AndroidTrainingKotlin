@@ -47,12 +47,15 @@
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/nav_header_home.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/context_menu2.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/context_meue2.xml" value="0.1" />
+        <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/home.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/menu_action_bar.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/menu_activity_nav_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/menu_context.xml" value="0.365625" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/menu_popup.xml" value="0.365625" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/menus_activity_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/navigation_drawer.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

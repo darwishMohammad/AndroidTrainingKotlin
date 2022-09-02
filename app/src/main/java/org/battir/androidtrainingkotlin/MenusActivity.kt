@@ -14,7 +14,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class MenusActivity :AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MenusActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     var drawer: DrawerLayout? = null
     lateinit var mButton: Button
 
@@ -136,7 +136,11 @@ class MenusActivity :AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    override fun onCreateContextMenu(menu: ContextMenu, v: View, menuInfo: ContextMenu.ContextMenuInfo) {
+    override fun onCreateContextMenu(
+        menu: ContextMenu,
+        v: View,
+        menuInfo: ContextMenu.ContextMenuInfo,
+    ) {
         super.onCreateContextMenu(menu, v, menuInfo)
         menuInflater.inflate(R.menu.context_menu2, menu)
     }

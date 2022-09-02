@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ButtonAndToastActivity"
-    android:padding="20dp">
+    android:padding="20dp"
+    tools:context=".ButtonAndToastActivity">
 
     <TextView
         android:id="@+id/tv_urnmame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/urname"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@id/edt_urname"
-        android:textSize="20sp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edt_urname"
@@ -31,15 +31,14 @@
         app:layout_constraintStart_toEndOf="@id/tv_urnmame"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck"></EditText>
+
     <Button
         android:id="@+id/btn_ShowToast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:text="@string/sayh"
-        ></Button>
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,20 +3,20 @@ package org.battir.androidtrainingkotlin
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.content.DialogInterface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import org.battir.androidtrainingkotlin.ui.dialogs.InputDialog
 import org.battir.androidtrainingkotlin.ui.dialogs.TimePickerDialog
 import java.util.*
 
-class DialogsActivity : AppCompatActivity(), View.OnClickListener , InputDialog.OnInputListener{
+class DialogsActivity : AppCompatActivity(), View.OnClickListener, InputDialog.OnInputListener {
 
-    private val tv_name:TextView by lazy {findViewById<TextView>(R.id.tv_name)}
+    private val tv_name: TextView by lazy { findViewById<TextView>(R.id.tv_name) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,54 +30,62 @@ class DialogsActivity : AppCompatActivity(), View.OnClickListener , InputDialog.
     }
 
     override fun onClick(p0: View?) {
-       when(p0?.id){
-           R.id.btn_date_dialog->{
-               pickDate()
-           }
-           R.id.btn_time_dialog->{
-               TimePickerDialog().show(supportFragmentManager, "TimeTag")
-           }
-           R.id.btn_simple_dialog->{
-               val builder = AlertDialog.Builder(this)
+        when (p0?.id) {
+            R.id.btn_date_dialog -> {
+                pickDate()
+            }
+            R.id.btn_time_dialog -> {
+                TimePickerDialog().show(supportFragmentManager, "TimeTag")
+            }
+            R.id.btn_simple_dialog -> {
+                val builder = AlertDialog.Builder(this)
 
-               with(builder)
-               {
-                   setTitle("Dialog Title")
-                   setMessage("Dialog message")
-                   setPositiveButton("OK", DialogInterface.OnClickListener(function = dialogButonsClickListener))
-                   setNegativeButton(R.string.cancel, dialogButonsClickListener)
-                   setNeutralButton("Maybe", dialogButonsClickListener)
-                   //To prevent the user from dismissing without action
-                   // setCancelable(false)
-                   show()
-               }
-           }
-           R.id.btn_show_custom_dialog->{
+                with(builder)
+                {
+                    setTitle("Dialog Title")
+                    setMessage("Dialog message")
+                    setPositiveButton("OK",
+                        DialogInterface.OnClickListener(function = dialogButonsClickListener))
+                    setNegativeButton(R.string.cancel, dialogButonsClickListener)
+                    setNeutralButton("Maybe", dialogButonsClickListener)
+                    //To prevent the user from dismissing without action
+                    // setCancelable(false)
+                    show()
+                }
+            }
+            R.id.btn_show_custom_dialog -> {
 //            Create new instance from InputDialog fragment and show it to the user
-               InputDialog(this).show(supportFragmentManager, "taglikeID")
-           }
-       }
+                InputDialog(this).show(supportFragmentManager, "taglikeID")
+            }
+        }
     }
-        private val dialogButonsClickListener = { dialog: DialogInterface, which: Int ->
+
+    private val dialogButonsClickListener = { dialog: DialogInterface, which: Int ->
         //write your code here
-        when(which){
-            DialogInterface.BUTTON_POSITIVE ->{
-                Toast.makeText(applicationContext,"POSITIVE Button Presses",Toast.LENGTH_LONG).show()
+        when (which) {
+            DialogInterface.BUTTON_POSITIVE -> {
+                Toast.makeText(applicationContext, "POSITIVE Button Presses", Toast.LENGTH_LONG)
+                    .show()
                 dialog.dismiss()
 
-            } DialogInterface.BUTTON_NEGATIVE ->{
-            Toast.makeText(applicationContext,"NEGATIVE Button Presses",Toast.LENGTH_LONG).show()
-            dialog.dismiss()
+            }
+            DialogInterface.BUTTON_NEGATIVE -> {
+                Toast.makeText(applicationContext, "NEGATIVE Button Presses", Toast.LENGTH_LONG)
+                    .show()
+                dialog.dismiss()
 
-            } DialogInterface.BUTTON_NEUTRAL ->{
-            Toast.makeText(applicationContext,"NEUTRAL Button Presses",Toast.LENGTH_LONG).show()
-            dialog.dismiss()
+            }
+            DialogInterface.BUTTON_NEUTRAL -> {
+                Toast.makeText(applicationContext, "NEUTRAL Button Presses", Toast.LENGTH_LONG)
+                    .show()
+                dialog.dismiss()
 
             }
         }
     }
+
     override fun sendInput(input: String?) {
-        tv_name.text=input
+        tv_name.text = input
     }
 
     fun processTimePickerResult(hourOfDay: Int, minute: Int) {
@@ -88,6 +96,7 @@ class DialogsActivity : AppCompatActivity(), View.OnClickListener , InputDialog.
         val timeMessage = "$hour_string:$minute_string"
         (findViewById<View>(R.id.txt_time) as TextView).text = "Time : $timeMessage"
     }
+
     override fun onBackPressed() {
         val alertDialog = AlertDialog.Builder(this)
         alertDialog.setTitle("Exit? -Dialog Title-")
@@ -97,6 +106,7 @@ class DialogsActivity : AppCompatActivity(), View.OnClickListener , InputDialog.
         alertDialog.setCancelable(false)
         alertDialog.show()
     }
+
     fun pickDate() {
         val c = Calendar.getInstance()
         val year = c[Calendar.YEAR]
@@ -109,6 +119,7 @@ class DialogsActivity : AppCompatActivity(), View.OnClickListener , InputDialog.
             day)
         datePickerDialog.show()
     }
+
     fun processDatePickerResult(year: Int, month: Int, day: Int) {
         // The month integer returned by the date picker starts counting at 0
         // for January, so you need to add 1 to show months starting at 1.

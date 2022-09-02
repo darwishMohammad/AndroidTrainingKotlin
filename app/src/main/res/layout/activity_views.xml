@@ -17,7 +17,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -75,11 +75,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:onClick="showToastOfText"
         android:textOff="Yes"
         android:textOn="No"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        android:onClick="showToastOfText"/>
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
@@ -166,9 +166,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="City"
+        app:layout_constraintBaseline_toBaselineOf="@id/spinner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg_gender"
-        app:layout_constraintBaseline_toBaselineOf="@id/spinner"/>
+        app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -195,17 +195,17 @@
         android:id="@+id/fab_extended"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:icon="@drawable/arrow_left"
-        android:textAllCaps="false"
-        android:textAlignment="center"
-        app:iconTint="#8EEACA"
-        android:textColor="#05804F"
-        app:iconGravity="start"
-        tools:text="Back"
-
-        app:rippleColor="#D3AEAE"
         android:layout_marginStart="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#05804F"
+        app:icon="@drawable/arrow_left"
+        app:iconGravity="start"
+        app:iconTint="#8EEACA"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#D3AEAE"
+        tools:text="Back" />
 </androidx.constraintlayout.widget.ConstraintLayout>

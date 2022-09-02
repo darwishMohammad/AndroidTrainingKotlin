@@ -4,68 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DialogsActivity"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    tools:context=".DialogsActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_simple_dialog"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_simple_dialog"
             android:text="Show Simple Dialog"
             android:textAllCaps="false"
-            app:icon="@android:drawable/ic_popup_sync"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            app:icon="@android:drawable/ic_popup_sync" />
+
         <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/btn_date_dialog"
-            android:text="Show Date Dialog"
-            app:iconGravity="textTop"
-            app:icon="@android:drawable/sym_call_outgoing"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:textAllCaps="false"/>
-        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Show Date Dialog"
+            android:textAllCaps="false"
+            app:icon="@android:drawable/sym_call_outgoing"
+            app:iconGravity="textTop" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_time_dialog"
-            android:text="Show Time Dialog"
-            app:iconGravity="end"
-            app:iconSize="26dp"
-            app:icon="@android:drawable/arrow_up_float"
             style="@style/Widget.MaterialComponents.TimePicker.ImageButton"
-            android:textAllCaps="false"/>
-        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Show Time Dialog"
+            android:textAllCaps="false"
+            app:icon="@android:drawable/arrow_up_float"
+            app:iconGravity="end"
+            app:iconSize="26dp" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_show_custom_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Show custom Dialog"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
+
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name not entered yet"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:text="name not entered yet" />
+
         <TextView
             android:id="@+id/txt_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Time not entered yet"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:text="Time not entered yet" />
+
         <TextView
             android:id="@+id/txt_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date not entered yet"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:text="Date not entered yet" />
     </LinearLayout>
 </ScrollView>

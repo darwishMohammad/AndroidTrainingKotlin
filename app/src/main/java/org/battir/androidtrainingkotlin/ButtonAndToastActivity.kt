@@ -10,9 +10,9 @@ class ButtonAndToastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val btn_hel=findViewById<Button>(R.id.btn_ShowToast)
+        val btn_hel = findViewById<Button>(R.id.btn_ShowToast)
 
-        val edt_name=findViewById<EditText>(R.id.edt_urname)
+        val edt_name = findViewById<EditText>(R.id.edt_urname)
 
 //        btn_hel.setOnClickListener(object : View.OnClickListener {
 //            override fun onClick(view: View?) {
@@ -20,8 +20,10 @@ class ButtonAndToastActivity : AppCompatActivity() {
 //            }
 //        })
 
-        btn_hel.setOnClickListener{
-            Toast.makeText(this@ButtonAndToastActivity, "Hello ${edt_name.text}", Toast.LENGTH_SHORT).show()
+        btn_hel.setOnClickListener {
+            Toast.makeText(this@ButtonAndToastActivity,
+                "Hello ${edt_name.text}",
+                Toast.LENGTH_SHORT).show()
         }
 
 //        btn_hel.setOnClickListener(View.OnClickListener { view ->

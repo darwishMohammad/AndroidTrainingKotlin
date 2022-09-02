@@ -12,14 +12,14 @@ class ActivitySavedInstance : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saved_instance)
         txt_counter = findViewById(R.id.txt_counter)
-        findViewById<Button>(R.id.btn_count).setOnClickListener{
-            var count = txt_counter!!.text.toString().toInt()
-            txt_counter!!.text = "".plus(++count)
+        findViewById<Button>(R.id.btn_count).setOnClickListener {
+            var count = txt_counter.text.toString().toInt()
+            txt_counter.text = "".plus(++count)
         }
 
-    /* You can restore the saved instance in onCreate function and also in
-        RestoreInstanceState
-        */
+        /* You can restore the saved instance in onCreate function and also in
+            RestoreInstanceState
+            */
 //        if (savedInstanceState != null) {
 //            val count = savedInstanceState.getString("count")
 //            if (txt_counter != null) txt_counter.setText(count)
@@ -54,13 +54,14 @@ class ActivitySavedInstance : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("count", txt_counter!!.text.toString())
+        outState.putString("count", txt_counter.text.toString())
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        txt_counter!!.text = savedInstanceState.getString("count")
+        txt_counter.text = savedInstanceState.getString("count")
     }
+
     companion object {
         private const val TAG = "ActivitySavedInstance"
     }

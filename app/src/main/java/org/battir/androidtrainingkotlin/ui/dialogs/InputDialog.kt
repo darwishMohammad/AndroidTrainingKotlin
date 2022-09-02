@@ -4,7 +4,6 @@ package org.battir.androidtrainingkotlin.ui.dialogs
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,9 +46,9 @@ class InputDialog(val _mOnInputListener: OnInputListener) : DialogFragment() {
                 //if the arguments aren’t used
                 DialogInterface.OnClickListener { _, _ ->
                     //To dismiss the dialog, use one of the following
-                   // getDialog()?.cancel()
-                  //  getDialog()?.dismiss()
-                   dismiss()
+                    // getDialog()?.cancel()
+                    //  getDialog()?.dismiss()
+                    dismiss()
 
                 })
         //You can use the following code to call the click handler for the dialog buttons
@@ -63,7 +62,7 @@ class InputDialog(val _mOnInputListener: OnInputListener) : DialogFragment() {
         return builder.create()
     }
 
-//    val dialogButonsClickLisitener = { dialog: DialogInterface, which: Int ->
+    //    val dialogButonsClickLisitener = { dialog: DialogInterface, which: Int ->
 //        //write your code here
 //        when(which){
 //            DialogInterface.BUTTON_POSITIVE ->{

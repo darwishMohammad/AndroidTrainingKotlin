@@ -19,8 +19,8 @@
         android:id="@+id/btn_contextMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show Context Menu"
-        android:focusable="true"/>
+        android:focusable="true"
+        android:text="Show Context Menu" />
 
     <TextView
         android:id="@+id/textView"

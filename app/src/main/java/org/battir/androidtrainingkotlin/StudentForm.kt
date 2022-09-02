@@ -1,7 +1,7 @@
 package org.battir.androidtrainingkotlin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class StudentForm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -54,8 +54,8 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true"
-            android:roundIcon="@mipmap/demo_app_icon"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home"
+            android:roundIcon="@mipmap/demo_app_icon">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

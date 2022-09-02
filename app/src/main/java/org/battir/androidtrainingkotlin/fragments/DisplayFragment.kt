@@ -27,7 +27,7 @@ class DisplayFragment : Fragment() {
     }
 
     fun change(txt: String?) {
-        Log.i("change called",txt.toString())
+        Log.i("change called", txt.toString())
         tv_selectedCity?.setText(txt)
     }
 }

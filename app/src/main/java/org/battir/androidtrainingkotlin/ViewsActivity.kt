@@ -1,6 +1,5 @@
 package org.battir.androidtrainingkotlin
 
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -14,7 +13,8 @@ import org.battir.androidtrainingkotlin.Adapters.SpinnerCustomAdapter
 class ViewsActivity : AppCompatActivity() {
     lateinit var radioGroup: RadioGroup
     var spinner: Spinner? = null
-    var countryNames = arrayOf<String>("India", "China", "Australia", "Portugle", "America", "New Zealand")
+    var countryNames =
+        arrayOf<String>("India", "China", "Australia", "Portugle", "America", "New Zealand")
     var flags = intArrayOf(R.drawable.bar_chart,
         R.drawable.emp_pic3,
         R.drawable.ic_job_running,
@@ -32,7 +32,7 @@ class ViewsActivity : AppCompatActivity() {
         radioGroup = findViewById<View>(R.id.rg_gender) as RadioGroup
         radioGroup!!.setOnCheckedChangeListener { radioGroup, checkedId ->
             when (checkedId) {
-                R.id.rb_1 ->{
+                R.id.rb_1 -> {
                     Toast.makeText(applicationContext, "Index 1", Toast.LENGTH_LONG).show()
                 }
                 R.id.rb_2 -> Toast.makeText(applicationContext, "Index 2", Toast.LENGTH_LONG).show()
@@ -66,12 +66,12 @@ class ViewsActivity : AppCompatActivity() {
         editText1.requestFocus()
         editText1.setOnFocusChangeListener(View.OnFocusChangeListener { view, b ->
             if (b == true) {
-                var edt:EditText =view as EditText
+                var edt: EditText = view as EditText
                 edt.setTextColor(Color.RED)
                 Toast.makeText(this, "Focus Loast", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(this, "Focus gained", Toast.LENGTH_LONG).show()
-                var edt:EditText =view as EditText
+                var edt: EditText = view as EditText
                 edt.setTextColor(Color.BLACK)
             }
         })

@@ -5,23 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StudentForm">
+
     <TextView
         android:id="@+id/tv_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Name:"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@id/edt_name"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/edt_name"
         android:layout_width="0dp"
-        app:layout_constraintHorizontal_weight="0.5"
         android:layout_height="wrap_content"
-        android:text="Name:"
         android:inputType="phone"
-        app:layout_constraintStart_toEndOf="@id/tv_1"
+        android:text="Name:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_1"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
