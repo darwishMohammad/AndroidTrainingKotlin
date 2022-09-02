@@ -24,11 +24,9 @@ class TabsActivity : AppCompatActivity() {
         pager = findViewById(R.id.viewPager)
         tab = findViewById(R.id.tabs)
         bar = findViewById(R.id.toolbar)
-
         // To make our toolbar show the application
         // we need to give it to the ActionBar
         setSupportActionBar(bar)
-
         // Initializing the ViewPagerAdapter
         val adapter = ViewPagerAdapter(this)
 
