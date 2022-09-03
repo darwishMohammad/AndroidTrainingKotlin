@@ -16,6 +16,7 @@
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_frament.xml" value="0.1" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_home.xml" value="0.22727272727272727" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_life_cycle.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_live_data.xml" value="0.3359375" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_main2.xml" value="0.35260416666666666" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/activity_menus.xml" value="0.36666666666666664" />
@@ -45,6 +46,7 @@
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/fragment_tab2.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/fragment_tabs.xml" value="0.35260416666666666" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/menu_activity_nav_header.xml" value="0.365625" />
+        <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/model.xml" value="0.3359375" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/nav_header_home.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidDev/AndroidTrainingKotlin/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />

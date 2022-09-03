@@ -32,6 +32,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         findViewById<Button>(R.id.btn_dialogsActivity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_MenusActivity).setOnClickListener(this)
         findViewById<Button>(R.id.btn_TabsActivity).setOnClickListener(this)
+        findViewById<Button>(R.id.btn_LiveDataRecyclerView).setOnClickListener(this)
         //endregion
 
     }
@@ -62,21 +63,21 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this@HomeActivity, ScrollTextActivity::class.java))
             }
             R.id.btn_opengoogle -> {
-//                var uri: Uri = Uri.parse("http://www.google.com")
-//                var it:Intent = Intent(Intent.ACTION_VIEW,uri)
-//                startActivity(it)
-                val request =
-                    DownloadManager.Request(Uri.parse("https://i.pinimg.com/564x/9d/25/8c/9d258cb09c821961e092b9b459399d9e.jpg"))
-                request.setAllowedOverMetered(true)
-                    .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                var manager: DownloadManager = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-//                manager.enqueue(request)
-                val reference: Long = manager.enqueue(request)
-                val downloadIntent = Intent(this, DOWNLOAD_SERVICE::class.java).apply {
-                    data =
-                        Uri.parse("https://i.pinimg.com/564x/9d/25/8c/9d258cb09c821961e092b9b459399d9e.jpg")
-                }
-                startService(downloadIntent)
+                var uri: Uri = Uri.parse("http://www.google.com")
+                var it:Intent = Intent(Intent.ACTION_VIEW,uri)
+                startActivity(it)
+//                val request =
+//                    DownloadManager.Request(Uri.parse("https://i.pinimg.com/564x/9d/25/8c/9d258cb09c821961e092b9b459399d9e.jpg"))
+//                request.setAllowedOverMetered(true)
+//                    .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+//                var manager: DownloadManager = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+////                manager.enqueue(request)
+//                val reference: Long = manager.enqueue(request)
+//                val downloadIntent = Intent(this, DOWNLOAD_SERVICE::class.java).apply {
+//                    data =
+//                        Uri.parse("https://i.pinimg.com/564x/9d/25/8c/9d258cb09c821961e092b9b459399d9e.jpg")
+//                }
+//                startService(downloadIntent)
             }
             R.id.btn_dialphone -> {
                 var uri: Uri = Uri.parse("tel:+972568474940")
@@ -111,6 +112,9 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_TabsActivity -> {
                 startActivity(Intent(this@HomeActivity, TabsActivity::class.java))
+            }
+            R.id.btn_LiveDataRecyclerView -> {
+                startActivity(Intent(this@HomeActivity, LiveDataActivity::class.java))
             }
 
         }
